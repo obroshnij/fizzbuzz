@@ -5,7 +5,7 @@ require './helpers'
 class FizzBuzzApp < Sinatra::Base
   helpers Helpers
 
-  get '/?' do
+  get '/' do
     params[:number] ||= 100
     @sequence = FizzBuzzGame.new(params[:number].to_i).build_sequence
     erb :index
